@@ -1,15 +1,13 @@
-//
-//  DetailView.swift
-//  Scrumdinger
-//
-//  Created by owen on 10/19/25.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
+
 import SwiftUI
 import ThemeKit
 
 struct DetailView: View {
-    var scrum: DailyScrum
-    
+    @Binding var scrum: DailyScrum
+
     @State private var editingScrum = DailyScrum.emptyScrum
     @State private var isPresentingEditView = false
     
@@ -22,11 +20,13 @@ struct DetailView: View {
                         .foregroundColor(.accentColor)
                 }
                 HStack {
-                    Label("length", systemImage: "clock")
+                    Label("Length", systemImage: "clock")
+                    Spacer()
+                    Text("\(scrum.lengthInMinutes) minutes")
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
-                    Label("theme", systemImage: "paintpalette")
+                    Label("Theme", systemImage: "paintpalette")
                     Spacer()
                     Text(scrum.theme.name)
                         .padding(4)
@@ -44,7 +44,7 @@ struct DetailView: View {
         }
         .navigationTitle(scrum.title)
         .toolbar {
-            Button("edit") {
+            Button("Edit") {
                 isPresentingEditView = true
                 editingScrum = scrum
             }
