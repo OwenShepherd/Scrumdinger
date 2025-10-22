@@ -22,13 +22,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ThemeKit,
-				TimerKit/.gitignore,
-				TimerKit/LICENSE/LICENSE.txt,
-				TimerKit/Package.swift,
-				"TimerKit/Sources/TimerKit/Models/AVPlayer+Ding.swift",
-				TimerKit/Sources/TimerKit/Models/ScrumTimer.swift,
-				TimerKit/Sources/TimerKit/Resources/ding.wav,
-				TimerKit/Sources/TimerKit/Views/ScrumProgressViewStyle.swift,
 			);
 			target = 5A9782DC2EA2F2D800EE44D7 /* Scrumdinger */;
 		};

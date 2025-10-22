@@ -4,15 +4,15 @@
 //
 //  Created by owen on 10/17/25.
 //
-
+import SwiftData
 import SwiftUI
 
 @main
 struct ScrumdingerApp: App {
-    @State private var scrums = DailyScrum.sampleData
     var body: some Scene {
         WindowGroup {
-            ScrumsView(scrums: $scrums)
+            ScrumsView()
         }
+        .modelContainer(for: DailyScrum.self)
     }
 }
